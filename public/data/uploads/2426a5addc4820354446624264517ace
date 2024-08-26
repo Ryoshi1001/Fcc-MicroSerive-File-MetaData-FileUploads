@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red11\green90\blue124;\red21\green20\blue38;
+\red242\green244\blue245;\red21\green20\blue38;\red242\green244\blue245;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c42931\c55996;\cssrgb\c10588\c10588\c19608;
+\cssrgb\c96078\c96471\c96863;\cssrgb\c10588\c10588\c19608;\cssrgb\c96078\c96471\c96863;}
+\margl1440\margr1440\vieww16780\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+Freecodecamp error can be for : \
+\pard\pardeftab720\sa144\partightenfactor0
+
+\f1\b\fs36 \cf3 3.
+\fs32 \cf4 \cb5  \cf4 \cb5 Serve Static Assets
+\f0\b0 \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32\fsmilli16200 \cf2 express.static(path)
+\f2\fs36 \cf4 \cb5 \
+
+\f0\fs32\fsmilli16200 \cf2 \cb1 app.use(path, middlewareFunction)
+\f2\fs36 \cf4 \cb5 .\
+
+\f1\b\fs32 \cb1 \
+\pard\pardeftab720\sl360\sa288\partightenfactor0
+
+\f2\b0\fs24 \cf4 \cb5 An HTML server usually has one or more directories that are accessible by the user. You can place there the static assets needed by your application (stylesheets, scripts, images).\cb1 \
+\cb5 In Express, you can put in place this functionality using the middleware\'a0
+\fs32\fsmilli16200 express.static(path)
+\fs24 , where the\'a0
+\fs32\fsmilli16200 path
+\fs24 \'a0parameter is the absolute path of the folder containing the assets.\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf4 \cb5 If you don\'92t know what middleware is... don\'92t worry, we will discuss in detail later. Basically, middleware are functions that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method\'a0
+\fs32\fsmilli16200 app.use(path, middlewareFunction)
+\fs24 . The first\'a0
+\fs32\fsmilli16200 path
+\fs24 \'a0argument is optional. If you don\'92t pass it, the middleware will be executed for all requests.\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs36 \cf4 \cb5 \
+\pard\pardeftab720\sl360\sa288\partightenfactor0
+
+\fs24 \cf4 Mount the\'a0
+\fs32\fsmilli16200 express.static()
+\fs24 \'a0middleware to the path\'a0
+\fs32\fsmilli16200 /public
+\fs24 \'a0with\'a0
+\fs32\fsmilli16200 app.use()
+\fs24 . The absolute path to the assets folder is\'a0
+\fs32\fsmilli16200 __dirname + /public
+\fs24 .\cb1 \
+\cb5 Now your app should be able to serve a CSS stylesheet. Note that the\'a0
+\fs32\fsmilli16200 /public/style.css
+\fs24 \'a0file is referenced in the\'a0
+\fs32\fsmilli16200 /views/index.html
+\fs24 \'a0in the project boilerplate. Your front-page should look a little better now!\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs60 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 html: <link rel="stylesheet" href="/public/style.css">\
+\
+Should be can be: \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 <link rel="stylesheet" href="/style.css">\
+For 
+\f1\b\fs32 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 Serve Static Assets\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs36 \cf6 \
+Question to work. }
